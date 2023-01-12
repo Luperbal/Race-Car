@@ -46,14 +46,14 @@ ROS package for an Autonomous Mobile Robot using the ackermann steering geometry
 ```
   
 ## Navegación
-1. Abrir Gazebo con el mundo
+1. Abrir el mundo en Gazebo
 ```bash
     cd ~/racecar_ws/src
     catkin_make
     source devel/setup.bash
     roslaunch racecar_gazebo racecar_runway_navigation.launch
  ```
- 2. Abrir RVIZ: haciendo click en 2D Nav Goal y en la posición deseada del mapa, se genera el camino que seguirá el robot
+ 2. Abrir RVIZ. Haciendo click en 2D Nav Goal y en la posición deseada del mapa, se genera el camino que seguirá el robot
  ```bash
     cd ~/racecar_ws/src
     catkin_make
