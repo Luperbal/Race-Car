@@ -1,6 +1,9 @@
 # Race-Car
 ROS package for an Autonomous Mobile Robot using the ackermann steering geometry
 
+## Video demo
+https://youtu.be/IRxWt20X_rQ
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Dependencias
 ```bash
