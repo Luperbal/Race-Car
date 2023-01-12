@@ -182,6 +182,7 @@ if __name__ == "__main__":
 
     current_pose = rospy.Subscriber('/pf/pose/odom', Odometry, callback_read_current_position, queue_size=1)
     path_pose = rospy.Subscriber('/move_base/TebLocalPlannerROS/global_plan', Path, callback_read_path, queue_size=1)
+        
     navigation_input = rospy.Publisher('/vesc/low_level/ackermann_cmd_mux/input/navigation', AckermannDriveStamped, queue_size=1)
     
     rospy.spin()
