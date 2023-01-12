@@ -31,3 +31,17 @@ ROS package for an Autonomous Mobile Robot using the ackermann steering geometry
     source devel/setup.bash
     roslaunch racecar_gazebo racecar_runway.launch
 ```
+2. Abrir RVIZ para generar el mapa
+```bash
+    cd ~/racecar_ws/src
+    catkin_make
+    source devel/setup.bash
+    roslaunch racecar_gazebo slam_gmapping.launch
+```
+3. Guardar el mapa
+```bash
+    cd ~/racecar_ws/src
+    catkin_make
+    source devel/setup.bash
+    rosrun map_server map_saver -f ~/racecar_ws/src/racecar/racecar_gazebo/map/mapa
+```
