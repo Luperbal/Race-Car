@@ -23,25 +23,47 @@ ROS package for an Autonomous Mobile Robot using the ackermann steering geometry
     cd ..
     catkin_make
  ```
-1. Abrir el mundo en Gazebo
-
+2. Abrir el mundo en Gazebo
 ```bash
     cd ~/racecar_ws/src
     catkin_make
     source devel/setup.bash
     roslaunch racecar_gazebo racecar_runway.launch
 ```
-2. Abrir RVIZ para generar el mapa
+3. Abrir RVIZ para generar el mapa
 ```bash
     cd ~/racecar_ws/src
     catkin_make
     source devel/setup.bash
     roslaunch racecar_gazebo slam_gmapping.launch
 ```
-3. Guardar el mapa
+4. Guardar el mapa
 ```bash
     cd ~/racecar_ws/src
     catkin_make
     source devel/setup.bash
     rosrun map_server map_saver -f ~/racecar_ws/src/racecar/racecar_gazebo/map/mapa
 ```
+  
+## Navegación
+1. Abrir Gazebo con el mundo
+```bash
+    cd ~/racecar_ws/src
+    catkin_make
+    source devel/setup.bash
+    roslaunch racecar_gazebo racecar_runway_navigation.launch
+ ```
+ 2. Abrir RVIZ: haciendo click en 2D Nav Goal y en la posición deseada del mapa, se genera el camino que seguirá el robot
+ ```bash
+    cd ~/racecar_ws/src
+    catkin_make
+    source devel/setup.bash
+    roslaunch racecar_gazebo racecar_rviz.launch
+ ```
+3. Llamar al script de path\_pursuit.py para que el robot siga el camino:
+ ```bash
+    cd ~/racecar_ws/src
+    catkin_make
+    source devel/setup.bash
+    rosrun racecar_gazebo path_pursuit.py
+ ```
